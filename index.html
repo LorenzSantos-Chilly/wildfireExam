@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modal Example</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="container">
+      <h1>Your Subscriptions</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>Subscription</th>
+						<th>Next Rebill</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>$49.99 per month</td>
+						<td>December 13, 2020</td>
+					<td>
+						<button class="button" onclick="showConfirmationModal()">Cancel</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div id="confirmationModal" class="modal">
+		<div class="modal-content">
+			<p style="color:black">Are you sure you want to cancel?</p>
+			<button onclick="closeConfirmationModal()">No</button>
+			<button onclick="cancelAction()">Yes</button>
+		</div>
+	</div>
+
+	<div id="timeoutModal" class="modal">
+		<div class="modal-content">
+			<p style="color:black">Subscription successfully cancelled!.</p>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
